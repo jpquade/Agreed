@@ -6,10 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class Homepage extends AppCompatActivity {
 
     private ImageButton button;
     private ImageButton button2;
+    Calendar calendar;
+    SimpleDateFormat simpleDateFormat;
+    String Date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +26,8 @@ public class Homepage extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), PersonalLoan.class);
+                intent.putExtra("example.jer.agreed2.SOMETHING", Date);
                 openPersonalLoan();
             }
         });
@@ -32,15 +40,19 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
+        calendar = Calendar.getInstance();
+        simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        Date = simpleDateFormat.format(calendar.getTime());
     }
 
-        public void openPersonalLoan(){
-            Intent intent = new Intent(this, PersonalLoan.class);
-            startActivity(intent);
-        }
+    public void openPersonalLoan(){
+        Intent intent = new Intent(this, PersonalLoan.class);
+        intent.putExtra("example.jer.agreed2.SOMETHING", Date);
+        startActivity(intent);
+    }
 
-        public void openRoomMate(){
-            Intent intent = new Intent(this, RoomMate.class);
-            startActivity(intent);
-        }
+    public void openRoomMate(){
+        Intent intent = new Intent(this, RoomMate.class);
+        startActivity(intent);
+    }
 }
