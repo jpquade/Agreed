@@ -101,67 +101,6 @@ public class PersonalLoan extends AppCompatActivity {
                 intent.putExtra("Lender_state", Lstate);
                 intent.putExtra("Date_Time", dateanddate);
                 startActivity(intent);
-//create document object
-                Document document = new Document();
-//output file path
-                String outpath = Environment.getExternalStorageDirectory() + "/Loan.pdf";
-                try {
-//create pdf writer instance
-                    PdfWriter.getInstance(document, new FileOutputStream(outpath));
-//open the document for writing
-                    document.open();
-//add paragraph to the document
-                    Paragraph para = new Paragraph();
-                    addEmptyLine(para, 1);
-                    para.add(new Paragraph("Personal Loan Agreement", catFont));
-                    addEmptyLine(para, 3);
-                    para.add(new Paragraph("Loan Amount ", smallBold));
-                    document.add(new Paragraph(MoneyWords.getText().toString()));
-                    para.add(new Paragraph(" Dollars($) ", smallBold));
-                    document.add(new Paragraph(MoneyDolars.getText().toString()));
-                    addEmptyLine(para, 2);
-                    para.add(new Paragraph("Date: ", smallBold));
-                    document.add(new Paragraph(dateanddate));
-                    addEmptyLine(para, 2);
-                    para.add(new Paragraph("Above vaule recieved by ", smallBold));
-                    document.add(new Paragraph(Borrower.getText().toString()));
-                    addEmptyLine(para, 1);
-                    para.add(new Paragraph("Address of Borrower ", smallBold));
-                    document.add(new Paragraph(BAddress.getText().toString()));
-                    addEmptyLine(para, 1);
-                    para.add(new Paragraph("City of, ", smallBold));
-                    document.add(new Paragraph(BCity.getText().toString()));
-                    para.add(new Paragraph(", State of ", smallBold));
-                    document.add(new Paragraph(BState.getText().toString()));
-                    addEmptyLine(para, 2);
-                    para.add(new Paragraph("Name of Loaner ", smallBold));
-                    document.add(new Paragraph(Lender.getText().toString()));
-                    addEmptyLine(para, 1);
-                    para.add(new Paragraph("Address of Loaner ", smallBold));
-                    document.add(new Paragraph(LAddress.getText().toString()));
-                    addEmptyLine(para, 1);
-                    para.add(new Paragraph("City of, ", smallBold));
-                    document.add(new Paragraph(LCity.getText().toString()));
-                    para.add(new Paragraph(", State of ", smallBold));
-                    document.add(new Paragraph(LState.getText().toString()));
-//close the document
-                    document.close();
-
-                } catch (FileNotFoundException e) {
-// TODO Auto-generated catch block
-                    e.printStackTrace();
-                } catch (DocumentException e) {
-// TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-
-
-            private void addEmptyLine(Paragraph paragraph, int number) {
-                for (int i = 0; i < number; i++) {
-                    paragraph.add(new Paragraph(" "));
-                }
-
             }
         });
 
