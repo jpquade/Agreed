@@ -13,23 +13,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.Date;
 
-import com.itextpdf.text.Anchor;
-import com.itextpdf.text.BadElementException;
-import com.itextpdf.text.BaseColor;
-import com.itextpdf.text.Chapter;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Element;
-import com.itextpdf.text.Font;
-import com.itextpdf.text.List;
-import com.itextpdf.text.ListItem;
-import com.itextpdf.text.Paragraph;
-import com.itextpdf.text.Phrase;
-import com.itextpdf.text.Section;
-import com.itextpdf.text.pdf.PdfPCell;
-import com.itextpdf.text.pdf.PdfPTable;
-import com.itextpdf.text.pdf.PdfWriter;
-import com.example.jer.agreed2.R;
 
 import android.view.View;
 import android.widget.Button;
@@ -38,18 +21,9 @@ import android.widget.TextView;
 
 
 public class PersonalLoan extends AppCompatActivity {
-    String dateanddate;
+    String dateanddate, dt;
     String AmountWords, AmountDecimal, BName, Bcity, Bstate, Baddress, LName, Laddress,
             Lcity, Lstate;
-    private static String FILE = "c:/temp/FirstPdf.pdf";
-    private static Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18,
-            Font.BOLD);
-    private static Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12,
-            Font.NORMAL, BaseColor.RED);
-    private static Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16,
-            Font.BOLD);
-    private static Font smallBold = new Font(Font.FontFamily.TIMES_ROMAN, 12,
-            Font.BOLD);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +36,7 @@ public class PersonalLoan extends AppCompatActivity {
             String text = getIntent().getExtras().getString("example.jer.agreed2.SOMETHING");
             dateTimeView.setText(text);
             dateanddate = dateTimeView.toString();
+            dt = text;
         }
 
         fbutton.setOnClickListener(new View.OnClickListener() {
@@ -69,25 +44,26 @@ public class PersonalLoan extends AppCompatActivity {
             public void onClick(View view) {
 //reference to EditText
                 EditText MoneyWords = (EditText) findViewById(R.id.AmountinWords);
-                AmountWords = MoneyWords.toString();
+                AmountWords = MoneyWords.getText().toString();
                 EditText MoneyDolars = (EditText) findViewById(R.id.AmountinNumbers);
-                AmountDecimal = MoneyDolars.toString();
+                AmountDecimal = MoneyDolars.getText().toString();
                 EditText Borrower = (EditText) findViewById(R.id.BorrowName);
-                BName = Borrower.toString();
+                BName = Borrower.getText().toString();
                 EditText BAddress = (EditText) findViewById(R.id.AddressofB);
-                Baddress = BAddress.toString();
+                Baddress = BAddress.getText().toString();
                 EditText BCity = (EditText) findViewById(R.id.StateofC);
-                Bcity = BCity.toString();
+                Bcity = BCity.getText().toString();
                 EditText BState = (EditText) findViewById(R.id.StateofB);
-                Bstate = BState.toString();
+                Bstate = BState.getText().toString();
                 EditText Lender = (EditText) findViewById(R.id.LenderName);
-                LName = Lender.toString();
+                LName = Lender.getText().toString();
                 EditText LAddress = (EditText) findViewById(R.id.AddressofL);
-                Laddress = LAddress.toString();
+                Laddress = LAddress.getText().toString();
                 EditText LCity = (EditText) findViewById(R.id.CityNameL);
-                Lcity = LCity.toString();
+                Lcity = LCity.getText().toString();
                 EditText LState = (EditText) findViewById(R.id.StateNameL);
-                Lstate = LState.toString();
+                Lstate = LState.getText().toString();
+
                 Intent intent = new Intent(getApplicationContext(), extra.class);
                 intent.putExtra("Amount_Words", AmountWords);
                 intent.putExtra("Amount_Decimal", AmountDecimal);
@@ -99,7 +75,7 @@ public class PersonalLoan extends AppCompatActivity {
                 intent.putExtra("Lender_Address", Laddress);
                 intent.putExtra("Lender_City", Lcity);
                 intent.putExtra("Lender_state", Lstate);
-                intent.putExtra("Date_Time", dateanddate);
+                intent.putExtra("Date_Time", dt);
                 startActivity(intent);
             }
         });
