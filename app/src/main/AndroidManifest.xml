@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Homepage"></activity>
+        <activity android:name=".Homepage" />
         <activity android:name=".PersonalLoan" />
         <activity android:name=".RoomMate" />
         <activity android:name=".SplashScreen">
@@ -19,7 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".extra"></activity>
+        <activity android:name=".extra" />
+        <activity android:name=".terms" />
+        <activity android:name=".disclaimer"></activity>
     </application>
 
 </manifest>
