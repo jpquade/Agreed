@@ -37,17 +37,23 @@ public class disclaimer extends AppCompatActivity {
                 "Please note that the does not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites.");
         agree = (CheckBox) findViewById(R.id.checkBox);
         agree.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
-                View b = findViewById(R.id.button);
-                b.setVisibility(View.VISIBLE);
-            }
-        });
-        buttonOrder = (Button) findViewById(R.id.button);
-        buttonOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openHome();
+                if ((agree.isChecked())){
+                    View b = findViewById(R.id.button);
+                    b.setVisibility(View.VISIBLE);
+                    buttonOrder = (Button) findViewById(R.id.button);
+                    buttonOrder.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            openHome();
+                        }
+                    });
+
+                }
+                else{
+                    View b = findViewById(R.id.button);
+                    b.setVisibility(View.INVISIBLE);
+                }
             }
         });
     }

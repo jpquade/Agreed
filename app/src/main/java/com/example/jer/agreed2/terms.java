@@ -50,17 +50,25 @@ public class terms extends AppCompatActivity {
     agree.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+            if ((agree.isChecked())){
             View b = findViewById(R.id.button);
             b.setVisibility(View.VISIBLE);
+                buttonOrder = (Button) findViewById(R.id.button);
+                buttonOrder.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        openDis();
+                    }
+                });
+
+        }
+        else{
+                View b = findViewById(R.id.button);
+                b.setVisibility(View.INVISIBLE);
+            }
         }
     });
-               buttonOrder = (Button) findViewById(R.id.button);
-               buttonOrder.setOnClickListener(new View.OnClickListener() {
-                   @Override
-                   public void onClick(View view) {
-                       openDis();
-                   }
-               });
+
     }
 
 
