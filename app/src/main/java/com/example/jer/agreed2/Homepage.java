@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 public class Homepage extends AppCompatActivity {
 
     private ImageButton button;
-    private ImageButton button2;
+//    private ImageButton button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class Homepage extends AppCompatActivity {
                 openPersonalLoan();
             }
         });
-
+/*
         button2 = (ImageButton) findViewById(R.id.imageButton2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,7 +31,7 @@ public class Homepage extends AppCompatActivity {
                 openRoomMate();
             }
         });
-
+*/
     }
 
         public void openPersonalLoan(){

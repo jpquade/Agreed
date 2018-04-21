@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".PersonalLoan2" />
         <activity android:name=".EntryLoan" />
-        <activity android:name=".ReviewLoan"></activity>
+        <activity android:name=".ReviewLoan" />
+        <activity android:name=".ReviewLoan2"></activity>
     </application>
 
 </manifest>

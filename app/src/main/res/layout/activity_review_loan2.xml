@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PersonalLoan2">
+    tools:context=".ReviewLoan2">
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/textView5"
         android:layout_width="330dp"
         android:layout_height="42dp"
         android:layout_marginBottom="8dp"
@@ -22,31 +22,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <TextView
-        android:id="@+id/textView54"
-        android:layout_width="114dp"
-        android:layout_height="42dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Preview"
-        android:textColor="@android:color/holo_red_light"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012" />
-
-    <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/textView56"
         android:layout_width="349dp"
         android:layout_height="37dp"
         android:layout_marginBottom="8dp"
@@ -66,7 +45,7 @@
         app:layout_constraintVertical_bias="0.017" />
 
     <TextView
-        android:id="@+id/textView22"
+        android:id="@+id/textView57"
         android:layout_width="274dp"
         android:layout_height="24dp"
         android:layout_marginBottom="8dp"
@@ -84,7 +63,7 @@
         app:layout_constraintVertical_bias="0.453" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/textView58"
         android:layout_width="274dp"
         android:layout_height="24dp"
         android:layout_marginBottom="8dp"
@@ -104,7 +83,7 @@
         app:layout_constraintVertical_bias="0.519" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/textView59"
         android:layout_width="354dp"
         android:layout_height="57dp"
         android:layout_marginBottom="8dp"
@@ -122,7 +101,7 @@
         app:layout_constraintVertical_bias="0.718" />
 
     <TextView
-        android:id="@+id/textView25"
+        android:id="@+id/textView60"
         android:layout_width="330dp"
         android:layout_height="47dp"
         android:layout_marginBottom="8dp"
@@ -142,7 +121,7 @@
         app:layout_constraintVertical_bias="0.309" />
 
     <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/textView61"
         android:layout_width="68dp"
         android:layout_height="24dp"
         android:layout_marginBottom="8dp"
@@ -163,7 +142,7 @@
         app:layout_constraintVertical_bias="0.151" />
 
     <TextView
-        android:id="@+id/textView27"
+        android:id="@+id/textView62"
         android:layout_width="334dp"
         android:layout_height="21dp"
         android:layout_marginBottom="8dp"
@@ -184,7 +163,7 @@
         app:layout_constraintVertical_bias="0.602" />
 
     <TextView
-        android:id="@+id/textView28"
+        android:id="@+id/textView63"
         android:layout_width="274dp"
         android:layout_height="24dp"
         android:layout_marginBottom="8dp"
@@ -202,7 +181,7 @@
         app:layout_constraintVertical_bias="0.406" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/imageButton2"
         android:layout_width="276dp"
         android:layout_height="65dp"
         android:layout_marginBottom="8dp"
@@ -217,7 +196,7 @@
         app:srcCompat="@color/colorPrimary" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/textView64"
         android:layout_width="146dp"
         android:layout_height="34dp"
         android:layout_marginBottom="8dp"
@@ -236,7 +215,7 @@
         app:layout_constraintVertical_bias="0.938" />
 
     <View
-        android:id="@+id/view3"
+        android:id="@+id/view13"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:layout_marginBottom="8dp"
