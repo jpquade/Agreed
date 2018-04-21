@@ -6,26 +6,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class PersonalLoan extends AppCompatActivity {
+public class PersonalLoan2 extends AppCompatActivity {
 
     private ImageButton button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_personal_loan);
+        setContentView(R.layout.activity_personal_loan2);
 
-        button = (ImageButton) findViewById(R.id.imageButton3);
+        button = (ImageButton) findViewById(R.id.imageButton4);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPersonalLoan2();
+                openEntryLoan();
             }
         });
     }
 
-    public void openPersonalLoan2(){
-        Intent intent = new Intent(this, PersonalLoan2.class);
+    public void openEntryLoan(){
+        Intent intent = new Intent(this, EntryLoan.class);
         startActivity(intent);
     }
 }
