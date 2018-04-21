@@ -113,7 +113,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Borrower will pay back the full amount plus the additional charges as listed on the Total Charges on the date___________."
+        android:text='Borrower will pay back the full amount plus the additional charges as listed in the section "Total Charges" on the date___________.'
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

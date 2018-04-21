@@ -1,7 +1,10 @@
 package com.example.jer.agreed2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class ReviewLoan extends AppCompatActivity {
@@ -25,12 +28,12 @@ public class ReviewLoan extends AppCompatActivity {
 
     int completeTotal;
 
+    private ImageButton button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_loan);
-
 
         completeTotal = Integer.parseInt(getIntent().getStringExtra("loanA")) + Integer.parseInt(getIntent().getStringExtra("loanE"));
 
@@ -66,5 +69,40 @@ public class ReviewLoan extends AppCompatActivity {
 
         loanTotal = tview8.getText().toString() + String.valueOf(completeTotal);
         tview8.setText(loanTotal);
+
+        button = (ImageButton) findViewById(R.id.imageButton6);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openReviewLoan2();
+            }
+        });
+    }
+
+    public void openReviewLoan2(){
+        Intent intent = new Intent(this, ReviewLoan2.class);
+        
+        dateEnd = edit6.getText().toString();
+        loanAmount = edit7.getText().toString();
+        loanExtra = edit8.getText().toString();
+
+        if(loanAmount.equals("")){
+            loanAmount = "0";
+        }
+        if(loanExtra.equals("")){
+            loanExtra = "0";
+        }
+
+
+        intent.putExtra("date1", dateStart);
+        intent.putExtra("borrowerN", borrowerName);
+        intent.putExtra("borrowerA", borrowerAddress);
+        intent.putExtra("lenderN", lender);
+        intent.putExtra("lenderA", lenderAddress);
+        intent.putExtra("date2", dateEnd);
+        intent.putExtra("loanA", loanAmount);
+        intent.putExtra("loanE", loanExtra);
+
+        startActivity(intent);
     }
 }

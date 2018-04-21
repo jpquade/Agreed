@@ -56,6 +56,7 @@ public class EntryLoan extends AppCompatActivity {
 
     public void openReviewLoan(){
         Intent intent = new Intent(this, ReviewLoan.class);
+ //       Intent intent2 = new Intent(this, ReviewLoan2.class);
 
         dateStart = edit.getText().toString();
         borrowerName = edit2.getText().toString();
@@ -82,6 +83,9 @@ public class EntryLoan extends AppCompatActivity {
         intent.putExtra("date2", dateEnd);
         intent.putExtra("loanA", loanAmount);
         intent.putExtra("loanE", loanExtra);
+
+//        intent2.putExtra("loanA", loanAmount);
+ //       intent2.putExtra("loanE", loanExtra);
 
         startActivity(intent);
     }

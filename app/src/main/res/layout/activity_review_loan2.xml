@@ -7,6 +7,24 @@
     tools:context=".ReviewLoan2">
 
     <TextView
+        android:id="@+id/textView65"
+        android:layout_width="354dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text='Borrower will pay back the full amount plus the additional charges as listed in the section "Total Charges" on the date'
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <TextView
         android:id="@+id/textView5"
         android:layout_width="330dp"
         android:layout_height="42dp"
@@ -54,7 +72,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Additional Charges:$___________"
+        android:text="Additional Charges:$"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +90,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Total Charges:$___________"
+        android:text="Total Charges:$"
         android:textColor="@android:color/black"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -81,24 +99,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.519" />
-
-    <TextView
-        android:id="@+id/textView59"
-        android:layout_width="354dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Borrower will pay back the full amount plus the additional charges as listed on the Total Charges on the date___________."
-        android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.718" />
 
     <TextView
         android:id="@+id/textView60"
@@ -172,7 +172,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Amount of Loan:$___________"
+        android:text="Amount of Loan:$"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

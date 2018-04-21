@@ -5,8 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class PersonalLoan2 extends AppCompatActivity {
+
+
 
     private ImageButton button;
 
