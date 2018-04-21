@@ -81,10 +81,14 @@ public class ReviewLoan extends AppCompatActivity {
 
     public void openReviewLoan2(){
         Intent intent = new Intent(this, ReviewLoan2.class);
-        
-        dateEnd = edit6.getText().toString();
-        loanAmount = edit7.getText().toString();
-        loanExtra = edit8.getText().toString();
+
+        String loanAmount;
+        String loanExtra;
+        String dateEnd2;
+
+        loanAmount = (String) getIntent().getStringExtra("loanA");
+        loanExtra = (String) getIntent().getStringExtra("loanE");
+        dateEnd2 = (String) getIntent().getStringExtra("date2");
 
         if(loanAmount.equals("")){
             loanAmount = "0";
@@ -94,14 +98,9 @@ public class ReviewLoan extends AppCompatActivity {
         }
 
 
-        intent.putExtra("date1", dateStart);
-        intent.putExtra("borrowerN", borrowerName);
-        intent.putExtra("borrowerA", borrowerAddress);
-        intent.putExtra("lenderN", lender);
-        intent.putExtra("lenderA", lenderAddress);
-        intent.putExtra("date2", dateEnd);
-        intent.putExtra("loanA", loanAmount);
-        intent.putExtra("loanE", loanExtra);
+        intent.putExtra("rdate2", dateEnd2);
+        intent.putExtra("rloanA", loanAmount);
+        intent.putExtra("rloanE", loanExtra);
 
         startActivity(intent);
     }
