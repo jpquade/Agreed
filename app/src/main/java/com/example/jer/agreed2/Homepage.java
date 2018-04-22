@@ -5,11 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class Homepage extends AppCompatActivity {
 
     private ImageButton button;
-//    private ImageButton button2;
+    private TextView tview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,27 +21,26 @@ public class Homepage extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPersonalLoan();
+                openClickContinue();
             }
         });
-/*
-        button2 = (ImageButton) findViewById(R.id.imageButton2);
-        button2.setOnClickListener(new View.OnClickListener() {
+
+        tview = (TextView) findViewById(R.id.textView59);
+        tview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openRoomMate();
+                openTermsandConditions();
             }
         });
-*/
     }
 
-        public void openPersonalLoan(){
-            Intent intent = new Intent(this, PersonalLoan.class);
-            startActivity(intent);
-        }
+    public void openClickContinue(){
+        Intent intent = new Intent(this, ClickContinue.class);
+        startActivity(intent);
+    }
 
-        public void openRoomMate(){
-            Intent intent = new Intent(this, RoomMate.class);
-            startActivity(intent);
-        }
+    public void openTermsandConditions(){
+        Intent intent = new Intent(this, TermsandConditions.class);
+        startActivity(intent);
+    }
 }

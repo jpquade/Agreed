@@ -22,7 +22,9 @@
         <activity android:name=".PersonalLoan2" />
         <activity android:name=".EntryLoan" />
         <activity android:name=".ReviewLoan" />
-        <activity android:name=".ReviewLoan2"></activity>
+        <activity android:name=".ReviewLoan2" />
+        <activity android:name=".TermsandConditions" />
+        <activity android:name=".ClickContinue"></activity>
     </application>
 
 </manifest>
